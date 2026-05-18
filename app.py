@@ -181,7 +181,7 @@ elif page == "📊 EDA Dashboard":
 
     try:
 
-        df = pd.read_csv("upi_transactions.csv.csv")
+        df = pd.read_csv("upi_transactions.csv")
 
         st.subheader("Dataset Preview")
 
