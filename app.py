@@ -352,49 +352,49 @@ elif page == "🔍 Fraud Prediction":
 
         })
 
-if st.button("Predict Fraud"):
-         # ML Prediction
-    prediction = model.predict(input_data)
-
-    # Hybrid Rule-Based Fraud Score
-    fraud_score = 0
-
-    if amount > 50000:
-        fraud_score += 30
-
-    if transaction_velocity >= 7:
-        fraud_score += 25
-
-    if failed_attempts >= 5:
-        fraud_score += 25
-
-    if recurring_payment == 0:
-        fraud_score += 10
-
-    if is_registered == 0:
-        fraud_score += 10
-
-    probability = fraud_score / 100
-
-    # Display Result
-    st.subheader("Prediction Result")
-
-    st.write(f"### Fraud Probability: {probability:.2%}")
-
-    st.progress(probability)
-
-    if probability >= 0.50:
-        st.error("🚨 Fraudulent Transaction Detected")
-    else:
-        st.success("✅ Genuine Transaction")
-
-    # Risk Level
-    if probability >= 0.80:
-        st.warning("🔴 High Risk Transaction")
-    elif probability >= 0.50:
-        st.warning("🟠 Medium Risk Transaction")
-    else:
-        st.info("🟢 Low Risk Transaction")
+        if st.button("Predict Fraud"):
+                 # ML Prediction
+            prediction = model.predict(input_data)
+        
+            # Hybrid Rule-Based Fraud Score
+            fraud_score = 0
+        
+            if amount > 50000:
+                fraud_score += 30
+        
+            if transaction_velocity >= 7:
+                fraud_score += 25
+        
+            if failed_attempts >= 5:
+                fraud_score += 25
+        
+            if recurring_payment == 0:
+                fraud_score += 10
+        
+            if is_registered == 0:
+                fraud_score += 10
+        
+            probability = fraud_score / 100
+        
+            # Display Result
+            st.subheader("Prediction Result")
+        
+            st.write(f"### Fraud Probability: {probability:.2%}")
+        
+            st.progress(probability)
+        
+            if probability >= 0.50:
+                st.error("🚨 Fraudulent Transaction Detected")
+            else:
+                st.success("✅ Genuine Transaction")
+        
+            # Risk Level
+            if probability >= 0.80:
+                st.warning("🔴 High Risk Transaction")
+            elif probability >= 0.50:
+                st.warning("🟠 Medium Risk Transaction")
+            else:
+                st.info("🟢 Low Risk Transaction")
 # =========================
 # BATCH FRAUD DETECTION
 # =========================
