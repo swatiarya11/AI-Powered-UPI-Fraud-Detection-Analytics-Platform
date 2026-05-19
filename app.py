@@ -336,8 +336,6 @@ elif page == "🔍 Fraud Prediction":
         [0, 1]
     )
 
-    if st.button("Predict Fraud"):
-
         input_data = pd.DataFrame({
 
             'AMOUNT': [amount],
@@ -354,6 +352,7 @@ elif page == "🔍 Fraud Prediction":
 
         })
 
+if st.button("Predict Fraud"):
          # ML Prediction
     prediction = model.predict(input_data)
 
