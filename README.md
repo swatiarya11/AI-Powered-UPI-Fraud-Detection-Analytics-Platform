@@ -83,46 +83,6 @@ XGBoost achieved the most balanced fraud detection performance under highly imba
 
 ---
 
-# 📂 Project Structure
-
-```bash
-AI-UPI-Fraud-Detection/
-│
-├── Data/
-│   ├── raw_dataset.csv
-│   ├── processed_dataset.csv
-│
-├── Databricks_Notebooks/
-│   ├── data_cleaning.ipynb
-│   ├── feature_engineering.ipynb
-│   ├── model_training.ipynb
-│
-├── SQL/
-│   ├── fraud_analysis.sql
-│
-├── PowerBI/
-│   ├── UPI_Fraud_Dashboard.pbix
-│
-├── Streamlit_WebApp/
-│   ├── app.py
-│   ├── requirements.txt
-│   ├── xgb_fraud_model.pkl
-│   ├── upi_transactions.csv
-│
-├── Presentation/
-│   ├── Final_Presentation.pptx
-│
-├── Screenshots/
-│   ├── home_dashboard.png
-│   ├── eda_dashboard.png
-│   ├── fraud_prediction.png
-│   ├── batch_upload.png
-│
-├── README.md
-```
-
----
-
 # 📊 Dataset Information
 
 The dataset contains transaction-related information such as:
