@@ -406,6 +406,3 @@ elif page == "🔍 Fraud Prediction":
         else:
             st.info("🟢 Low Risk Transaction")
             
-
-            st.error(f"Error: {e}")
-
