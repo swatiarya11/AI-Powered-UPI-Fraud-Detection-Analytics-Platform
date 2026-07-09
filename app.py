@@ -90,7 +90,7 @@ st.set_page_config(
 # LOAD MODEL
 # =====================================================
 
-model = joblib.load("xgb_fraud_model.pkl")
+model = joblib.load("logistic_regression_upi_fraud.pkl")
 
 # =====================================================
 # CUSTOM CSS
@@ -330,10 +330,13 @@ elif page == "🔍 Fraud Prediction":
         [0, 1]
     )
 
-    is_registered = st.selectbox(
-        "Is Registered Merchant?",
-        [0, 1]
+    new_device = st.selectbox(
+    "New Device?",
+    ["No", "Yes"],
+    help="Has the user logged in from a new device?"
     )
+
+    new_device = 1 if new_device == "Yes" else 0
 
     # CREATE INPUT DATAFRAME
 
@@ -349,7 +352,7 @@ elif page == "🔍 Fraud Prediction":
 
         'RECURRING_PAYMENT_FLAG': [recurring_payment],
 
-        'IS_REGISTERED': [is_registered]
+        'new_device_flag': [new_device]
 
     })
 
