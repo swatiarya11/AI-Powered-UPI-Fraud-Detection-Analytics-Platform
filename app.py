@@ -342,15 +342,15 @@ elif page == "🔍 Fraud Prediction":
 
     input_data = pd.DataFrame({
 
-        'AMOUNT': [amount],
+        'amount': [amount],
 
-        'TRANSACTION_VELOCITY': [transaction_velocity],
+        'transaction_velocity': [transaction_velocity],
 
-        'FAILED_ATTEMPTS_LAST_24H': [failed_attempts],
+        'failed_attempts_last_24h': [failed_attempts],
 
-        'IS_WEEKEND': [is_weekend],
+        'is_weekend': [is_weekend],
 
-        'RECURRING_PAYMENT_FLAG': [recurring_payment],
+        'recurring_payment_flag': [recurring_payment],
 
         'new_device_flag': [new_device]
 
