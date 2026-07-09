@@ -325,11 +325,14 @@ elif page == "🔍 Fraud Prediction":
         ["No", "Yes"]
     )
 
+    is_weekend = 1 if is_weekend == "Yes" else 0
+    
     recurring_payment = st.selectbox(
         "Recurring Payment?",
         ["No", "Yes"]
     )
-
+    recurring_payment = 1 if recurring_payment == "Yes" else 0
+    
     new_device = st.selectbox(
     "New Device?",
     ["No", "Yes"],
@@ -380,7 +383,7 @@ elif page == "🔍 Fraud Prediction":
         if recurring_payment == 0:
             fraud_score += 10
 
-        if is_registered == 0:
+        if new_device == 1:
             fraud_score += 10
 
         probability = fraud_score / 100
