@@ -322,12 +322,12 @@ elif page == "🔍 Fraud Prediction":
 
     is_weekend = st.selectbox(
         "Is Weekend?",
-        [0, 1]
+        ["No", "Yes"]
     )
 
     recurring_payment = st.selectbox(
         "Recurring Payment?",
-        [0, 1]
+        ["No", "Yes"]
     )
 
     new_device = st.selectbox(
